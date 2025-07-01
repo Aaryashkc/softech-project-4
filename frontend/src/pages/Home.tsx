@@ -5,14 +5,14 @@ import Profile from '../assets/profile.jpg';
 const Home = () => {
   return (
     <div>
-      {/* Hero Section with Mountain Background */}
+      {/* Hero Section with Nepal Parliament/Congress Background */}
       <section className="min-h-screen flex items-center relative overflow-hidden">
-        {/* Background Image with Overlay */}
+        {/* Background Image with Green Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `linear-gradient(135deg, rgba(21, 128, 61, 1) 0%, rgba(5, 150, 105, 0.7) 50%, rgba(16, 185, 129, 1) 100%), 
-                             url('https://images.unsplash.com/photo-1605538883669-825200433431?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+            backgroundImage: `linear-gradient(rgba(21, 128, 61, 0.75), rgba(21, 128, 61, 0.75)), 
+                             url('https://www.reuters.com/resizer/v2/https%3A%2F%2Farchive-images.prod.global.a201836.reutersmedia.net%2F2012%2F05%2F28%2F2012-05-28T160517Z_03_GM1E85N1PUM01_RTRRPP_0_NEPAL-PROTEST.JPG?auth=a53f417bd680ee842839eff8d13649f7ce3628270269289d6078b05bf0fe81dd&quality=80&width=1920')`
           }}
         />
         
@@ -146,7 +146,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-
+     
+     
       {/* Key Highlights Section with Nepal Temple Background */}
       <section className="py-20 relative overflow-hidden">
         {/* Background with overlay */}
@@ -208,20 +209,14 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Call to Action Section with Flag Colors Background */}
+      {/* Call to Action Section with Congress Party/Democracy Background */}
       <section className="py-20 relative overflow-hidden">
-        {/* Nepal flag inspired gradient background */}
+        {/* Congress Party/Democracy themed background with green overlay */}
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            background: `linear-gradient(135deg, 
-              #dc2626 0%, 
-              #dc2626 40%, 
-              #1d4ed8 40%, 
-              #1d4ed8 60%, 
-              #059669 60%, 
-              #059669 100%), 
-              linear-gradient(rgba(21, 128, 61, 0.9), rgba(21, 128, 61, 0.9))`
+            backgroundImage: `linear-gradient(rgba(21, 128, 61, 0.8), rgba(21, 128, 61, 0.8)), 
+                             url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
           }}
         />
         

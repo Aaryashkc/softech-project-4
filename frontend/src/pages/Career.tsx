@@ -84,11 +84,7 @@ const Career = () => {
   return (
     <div className="py-20">
       {/* Hero Section */}
-      <section className="text-white py-20"
-          style={{
-            backgroundImage: `linear-gradient(135deg, rgba(21, 128, 61, 2) 0%, rgba(5, 150, 105, 0.7) 50%, rgba(16, 185, 129, 1) 100%), 
-                             url('https://images.unsplash.com/photo-1605538883669-825200433431?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
-          }}>
+      <section className="bg-gradient-to-r from-green-700 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Political Career Journey

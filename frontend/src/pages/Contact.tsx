@@ -1,34 +1,6 @@
-import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Instagram, MessageCircle, Calendar, Users, ChevronDown } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Mail, Phone, MapPin, Clock, Facebook, Twitter, Instagram, MessageCircle, Calendar, Users } from 'lucide-react';
 
 const Contact = () => {
-  const [showScrollButton, setShowScrollButton] = useState(true);
-
-  const scrollToContactForm = () => {
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const contactForm = document.getElementById('contact-form');
-      if (!contactForm) return;
-      
-      const rect = contactForm.getBoundingClientRect();
-      // If the contact form is in view, hide the button
-      if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-        setShowScrollButton(false);
-      } else {
-        setShowScrollButton(true);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const contactInfo = [
     {
       icon: MapPin,
@@ -104,25 +76,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="py-20 relative">
-      {/* Add the floating email button */}
-      {showScrollButton && (
-        <button
-          onClick={scrollToContactForm}
-          className="fixed right-8 bottom-8 bg-green-800 hover:bg-green-900 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-50 transition-all duration-300 hover:scale-110"
-          aria-label="Scroll to contact form"
-        >
-          <Mail className="w-6 h-6" />
-          <ChevronDown className="absolute -bottom-6 text-green-800 w-6 h-6 animate-bounce" />
-        </button>
-      )}
-      
+    <div className="py-20">
       {/* Hero Section */}
-      <section className=" text-white py-20"
-          style={{
-            backgroundImage: `linear-gradient(135deg, rgba(21, 128, 61, 1) 0%, rgba(5, 150, 105, 0.7) 50%, rgba(16, 185, 129, 1) 100%), 
-                             url('https://images.unsplash.com/photo-1605538883669-825200433431?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
-          }}>
+      <section className="bg-gradient-to-r from-green-700 to-green-800 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Get in Touch
@@ -258,7 +214,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form */}
-      <section id="contact-form" className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
