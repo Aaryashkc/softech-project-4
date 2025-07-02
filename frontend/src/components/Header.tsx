@@ -84,6 +84,15 @@ const Header = () => {
                 </Link>
               ))}
             </nav>
+            
+            <div  className="mt-4">
+            <Link
+              to="/contact"
+              className="bg-green-800 hover:bg-green-900 text-white px-4 py-2 rounded-md font-medium transition-colors duration-200"
+            >
+              Get in Touch
+            </Link>
+            </div>
           </div>
         )}
       </div>
